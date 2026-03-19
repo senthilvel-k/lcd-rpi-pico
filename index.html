@@ -144,6 +144,73 @@
   .nav-links a:hover { color: var(--green); }
   .nav-links a:hover::after { right: 0; }
 
+  /* ── SERIES CROSS-NAV ── */
+  .series-nav {
+    background: rgba(5,10,8,0.95);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    position: sticky;
+    top: 64px;
+    z-index: 99;
+  }
+  .series-nav::-webkit-scrollbar { display: none; }
+  .series-nav-brand {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 0.6rem 1.25rem 0.6rem 0;
+    border-right: 1px solid var(--border);
+    margin-right: 0.25rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+  .series-nav a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.65rem 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: color 0.2s, background 0.2s;
+    border-bottom: 2px solid transparent;
+  }
+  .series-nav a:hover { color: var(--green); background: rgba(0,255,136,0.04); }
+  .series-nav a.active {
+    color: var(--green);
+    border-bottom-color: var(--green);
+    background: rgba(0,255,136,0.04);
+  }
+  .series-nav .portfolio-link {
+    margin-left: auto;
+    color: var(--text-dim) !important;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 0.35rem 0.9rem !important;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    border-bottom: 1px solid var(--border) !important;
+    transition: border-color 0.2s, color 0.2s !important;
+  }
+  .series-nav .portfolio-link:hover {
+    border-color: rgba(0,255,136,0.3) !important;
+    color: var(--green) !important;
+    background: transparent !important;
+  }
+
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
@@ -1078,7 +1145,16 @@
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- SERIES CROSS-NAV -->
+<div class="series-nav">
+  <div class="series-nav-brand">🍓 Pico Series</div>
+  <a href="./index.html" class="active">LCD Display</a>
+  <a href="../interrupt-rpi-pico/index.html">Interrupts</a>
+  <a href="../ultrasonic-rpi-pico/index.html">Ultrasonic</a>
+  <a href="../keypad-rpi-pico/index.html">Keypad</a>
+  <a href="../potentiometer-rpi-pico/index.html">Potentiometer</a>
+  <a href="https://senthilvel-k.github.io/#projects" target="_blank" class="portfolio-link">← Portfolio</a>
+</div>
 <section class="hero" id="about">
   <div class="hero-left">
     <div class="hero-tag">Pico Learning Series · Project 01</div>
