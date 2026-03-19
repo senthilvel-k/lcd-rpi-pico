@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Senthil Vel K — Embedded Software Engineer</title>
+<title>LCD Display — Pico Learning Series</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -34,6 +34,23 @@
     overflow-x: hidden;
     cursor: none;
   }
+
+  /* Series banner — matches other pages */
+  .series-banner {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0.4rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+  .series-banner a { color: var(--green); text-decoration: none; }
+  .series-num { color: var(--green); font-weight: 700; }
 
   /* Custom cursor */
   .cursor {
@@ -87,7 +104,7 @@
 
   /* ── NAV ── */
   nav {
-    position: fixed;
+    position: sticky;
     top: 0; left: 0; right: 0;
     z-index: 100;
     display: flex;
@@ -95,7 +112,7 @@
     align-items: center;
     padding: 1.25rem 3rem;
     border-bottom: 1px solid var(--border);
-    background: rgba(5,10,8,0.8);
+    background: rgba(5,10,8,0.9);
     backdrop-filter: blur(12px);
   }
   .nav-logo {
@@ -133,7 +150,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 6rem 3rem 3rem;
+    padding: 5rem 3rem 3rem;
     position: relative;
     gap: 4rem;
   }
@@ -1044,6 +1061,11 @@
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursor-ring"></div>
 
+<div class="series-banner">
+  <span>🎓 <a href="https://senthilvel-k.github.io/">Pico Learning Series</a> — Embedded Systems for Everyone</span>
+  <span class="series-num">01 / 05 — LCD Display</span>
+</div>
+
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="https://senthilvel-k.github.io/" style="text-decoration:none;">← <span>senthilvel-k.github.io</span></a>
@@ -1052,14 +1074,14 @@
     <a href="#protocol">Protocol</a>
     <a href="#code">Code</a>
     <a href="#hardware">Hardware</a>
-    <a href="https://github.com/senthilvel-k/lcd-rpi-pico" target="_blank" style="color:var(--green); border: 1px solid var(--border); padding: 0.3rem 0.75rem; border-radius:2px; transition: background 0.2s;" onmouseover="this.style.background='rgba(0,255,136,0.08)'" onmouseout="this.style.background='transparent'">GitHub ↗</a>
+    <a href="https://github.com/senthilvel-k/lcd-rpi-pico" target="_blank" style="color:var(--green); border: 1px solid var(--border); padding: 0.4rem 1rem; border-radius:2px; transition: background 0.2s;" onmouseover="this.style.background='rgba(0,255,136,0.08)'" onmouseout="this.style.background='transparent'">GitHub ↗</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="about">
   <div class="hero-left">
-    <div class="hero-tag">Personal Project · October 2023</div>
+    <div class="hero-tag">Pico Learning Series · Project 01</div>
     <h1 class="hero-name">
       <span class="first">LCD Display</span>
       <span class="last glitch" data-text="Pi Pico">Pi Pico</span>
@@ -1729,15 +1751,12 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-left">
-    <strong>Senthil Vel K</strong> · Embedded SW Engineer II · Visteon Corporation<br>
-    <span style="font-size:0.65rem">Personal Project · October 2023 ·
-      <a href="https://senthilvel-k.github.io/" style="color:var(--green); text-decoration:none;">senthilvel-k.github.io ↗</a>
-    </span>
+    <strong>Senthil Vel K</strong> · Embedded SW Engineer II · Visteon<br>
+    <span style="font-size:0.65rem">Pico Learning Series · <a href="https://senthilvel-k.github.io/" style="color:var(--green); text-decoration:none;">senthilvel-k.github.io ↗</a></span>
   </div>
   <div class="footer-links">
     <a href="https://senthilvel-k.github.io/#projects" target="_blank">← All Projects</a>
-    <a href="https://github.com/senthilvel-k/lcd-rpi-pico" target="_blank">GitHub Repo ↗</a>
-    <a href="https://github.com/senthilvel-k" target="_blank">@senthilvel-k</a>
+    <a href="https://github.com/senthilvel-k/lcd-rpi-pico" target="_blank">GitHub ↗</a>
   </div>
 </footer>
 
